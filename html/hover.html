@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/hover.css">
+    <script src="https://kit.fontawesome.com/230f1edc62.js" crossorigin="anonymous"></script> 
+
+    <style>
+        a{
+            list-style: none;
+            text-decoration: none;
+            margin: 100px;
+            background-color:#f9a0db;
+box-shadow: 2px 2px 5px grey;
+            padding: 10px 30px;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+        }
+   .hvr-curl-bottom-right::before{position: absolute!important;
+    top: 17px!important;
+    opacity: 0;
+    width: 23px !important;
+    height: 22px !important;
+    left: 71px;z-index: -1!important;
+    transition: .5s ease;
+
+           /* transition: .5s ease; */
+        }
+        .hvr-curl-bottom-right:hover:before, .hvr-curl-bottom-right:focus:before, .hvr-curl-bottom-right:active:before {
+ opacity: 1;
+    /* transform: translate(65px,-25px);} */}
+    span{transition: 1s ease-in;
+        background-color: rgb(245, 94, 245);
+        padding:8px 20px;
+        /* border-radius: 10px; */
+        color: white;
+    }
+    i{
+        margin-right: 10px;
+    }
+    span:hover{scale: 1.2;
+        transform: translateY(-5px);
+    }
+        
+    </style>
+</head>
+<body>
+    <a href="#" class="hvr-float-shadow hvr-curl-bottom-right ">go to</a>
+    <span class="hvr-icon-back hvr-sweep-to-top"><i class="fa fa-chevron-circle-left hvr-icon"></i>come</span>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/230f1edc62.js" crossorigin="anonymous"></script> 
+
+    <style>
+        *{font-size: 20px;
+            list-style: none;
+            text-decoration: none;
+            padding: 0;
+            color: black;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(249, 209, 215);
+        }
+        .main{overflow: hidden;
+            height: 100vh;
+            width: 100%;
+            position: relative
+            ;
+            
+        }
+        .menu{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+
+        }
+        .left  {background-color: rgb(185, 124, 243);
+            left: 0;
+           display: flex;
+          position: relative;
+          height: 100vh;
+          z-index: 100;
+          
+           flex-direction: column;
+           gap: 50px;
+           justify-content: center;
+            width: 40%;
+            transform: translateY(-100%);
+            transition: .5s ease-in-out;
+        }
+        input{
+            position: absolute;
+        }
+        .right  {background-color: rgb(153, 153, 246);
+            right: 0;
+            /* display: flex;
+            
+          
+          
+          gap: 20px; */
+          justify-content: center;
+            width: 60%;
+            transform: translateX(100%);
+            transition: .5s ease-in-out;
+        }
+       
+        li{padding-bottom: 10px;
+        width: 20%;
+        text-align: center;
+            position: relative;
+           
+        }
+        .right li::before{
+            content: '';
+            left: 0;
+            
+            z-index: 1;
+            bottom: 0;
+            background-color: white;
+            height: 3px;
+            width: 50%;
+            position: absolute;
+            transition:.6s ease-in;
+            border-radius: 5px;
+        }
+        li:hover::before{
+            transform: translateX(100%);
+        }
+        .right li::after{
+            content: '';
+            left: 0;
+            border-radius: 5px;
+            bottom: 0;
+            background-color: purple;
+            height: 3px;
+            width: 100%;
+            position: absolute;
+        }
+        .left p{transform: rotate(-45deg);
+            color: white;
+            width: 100%;
+            text-align: center;
+            font-weight: 900;
+        }
+      
+        .left i{font-size: 40px;
+           position: absolute;
+           top: 260px;
+           left: -38px;
+           transform: rotate(-45deg);
+            color: rgb(155, 12, 155);
+            width: 100%;
+            text-align: center;
+            font-weight: 900;
+        }
+        .right ul{margin-top: 50px;
+            direction: rtl;
+            margin-right: 40px;
+
+        }
+        .right ul li{margin-top: 50px;
+            direction: rtl;
+           
+
+        }
+        .right ul li a{color: white;
+            font-size: 24px;
+            text-shadow: 1px 1px 1px black;
+           
+
+        }
+        label{z-index: 102;
+            position: fixed;
+            top: 5px;
+            left: 15px;
+        }
+        label span.bar{
+            height: 3px;
+            width: 25px;
+            background-color: blueviolet;
+            margin-top: 5px;
+            display: block;
+            transition: .4s ease-in;
+       
+        }
+        input{
+            display: none;
+        }
+        input:checked~aside .right{
+            transform: translateX(0);
+        }
+        input:checked~aside .left{
+            transform: translateY(0);
+        }
+        input:checked~label .bar{
+            background-color: white;
+        }
+        input:checked~label .before{
+            transform: translateY(5px) rotate(45deg);
+            
+        }
+        input:checked~label .middel{
+            opacity: 0;
+            
+        }
+        input:checked~label .after{
+            transform: translateY(-10px) rotate(-45deg);
+            
+        }
+        @media screen and (max-width:992px) {.right{
+            width: 100%;
+        }
+        .left{
+            display: none;
+        }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="checkbox" name="in" id="input">
+        <label for="input"><span class="bar before"></span><span class="bar middel"></span><span class="bar after"></span></label>
+        <aside>
+            <div class="menu left">
+                <i class="fa-solid fa-hand-point-down"></i>
+                <p>اینجا صفحه ورود به سایت است</p>
+            </div>
+            <div class="menu right">
+                <ul>
+                    <li><a href="">خانه</a></li>
+                    <li><a href="">پروفایل</a></li>
+                    <li><a href="">سبد خرید</a></li>
+                    <li><a href="">پشتیبانی</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

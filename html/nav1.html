@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav1</title>
+    <script src="https://kit.fontawesome.com/230f1edc62.js" crossorigin="anonymous"></script> 
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous">
+    </script>
+    <style>
+        *{
+            list-style: none;
+            text-decoration: none;
+            color: aliceblue;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(35, 35, 77);
+        }
+        nav{width: 500px;
+            margin: 0 auto;
+            display:flex;
+            flex-direction: row; 
+            height: 50px;
+     
+            align-items: center;
+            background-color: rgb(62, 62, 122);
+            position: relative;
+            border-radius: 5px;
+        }
+        a{z-index: 1;
+         
+            font-weight: 900;
+            transition: .5s ease;
+            text-align: center;
+            line-height: 50px;
+
+        }
+   
+
+        a:nth-child(1){
+            width: 100px;
+        }
+        a:nth-child(2){
+            width: 100px;
+        }
+     
+        a:nth-child(3){
+            width: 100px;
+        }
+        a:nth-child(4){
+            width: 100px;
+        }
+        a:nth-child(5){
+            width: 100px;
+        }
+        .anime{transition: .5s ease;
+            position: absolute;
+            height: 100%;
+            /* border-radius: 10px; */
+          
+        }
+     
+     
+        
+        .anime,a:nth-child(1):hover ~.anime{right: 0;
+            border-radius: 0 5px 5px 0;
+            width: 100px;
+            background-color: rgb(239, 144, 160);
+            /* border-bottom:3px solid rgb(239, 144, 160); */
+
+        }
+        a:nth-child(2):hover ~.anime{right: 100px;
+            width: 100px;
+            border-radius: 0;
+            background-color: rgb(238, 75, 238);
+            /* border-bottom:3px solid  rgb(238, 75, 238); */
+
+        }
+        a:nth-child(3):hover ~.anime{right: 200px;
+            width: 100px;
+            border-radius: 0;
+            background-color: rgb(50, 200, 241);
+            /* border-bottom:3px solid rgb(50, 200, 241); */
+
+        }
+        a:nth-child(4):hover ~.anime{right: 300px;
+            width: 100px;
+            border-radius: 0;
+            background-color: orange;
+            /* border-bottom:3px solid orange; */
+
+        }
+        a:nth-child(5):hover ~.anime{right: 400px;
+            width: 100px;
+            border-radius: 5px 0 0 5px;
+            background-color: rgb(123, 198, 11);
+            /* border-bottom:3px solid rgb(123, 198, 11); */
+
+        }
+        /* a:nth-child(2):active ~ .anime{background-color: brown;
+            right: 100px;
+        } */
+        .ac{ 
+             /* border-bottom:3px solid  rgb(238, 75, 238); */
+            background-color: rgb(238, 75, 238);
+            right: 100px;border-radius: 0;
+        }
+        .ac2{ 
+             /* border-bottom:3px solid rgb(50, 200, 241); */
+             background-color: rgb(50, 200, 241);
+            right: 200px;border-radius: 0;
+        }
+        .ac3{       
+            /* border-bottom:3px solid orange;   */
+            background-color: orange;
+            right: 300px;border-radius: 0;
+        }
+        .ac4{ 
+            /* border-bottom:3px solid rgb(123, 198, 11); */
+            background-color: rgb(123, 198, 11);
+            right: 400px;border-radius:5px 0 0 5px;
+        }
+        .ac6{
+            right: 0;border-radius:  0 5px 5px 0;
+            background-color: rgb(239, 144, 160);
+            /* border-bottom:3px solid rgb(239, 144, 160);  */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">خانه</a>
+        <a class="one" href="#">بلاگ</a>
+        <a href="#">درباره ما</a>
+        <a href="#">سوالات</a>
+        <a href="#">پشتیبانی</a>
+      <div class="anime"></div>
+    </nav>
+    <script>
+        $('a:nth-child(2)').click(function(){$('.anime').removeClass('ac3 ac2 ac6 ac4');
+$('.anime').addClass('ac');
+
+        });
+        $('a:nth-child(3)').click(function(){$('.anime').removeClass('ac ac3 ac6 ac4');
+$('.anime').addClass('ac2');
+        });
+        $('a:nth-child(4)').click(function(){$('.anime').removeClass('ac4 ac2 ac6 ac');
+$('.anime').addClass('ac3');
+        });
+        $('a:nth-child(5)').click(function(){$('.anime').removeClass('ac3 ac2 ac6 ac');
+$('.anime').addClass('ac4');
+        });
+        $('a:nth-child(1)').click(function(){$('.anime').removeClass('ac3 ac2 ac4 ac');
+$('.anime').addClass('ac6');
+        });
+
+    </script>
+</body>
+</html>

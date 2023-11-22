@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cir{border: 2px solid transparent;
+            border-radius: 100%;
+            width: 80px;
+            height: 80px;
+            margin:200px auto;
+            padding: 10px;
+            rotate: 45deg;
+            animation: circle 4s 1 forwards;
+            position: relative;
+        }
+        .cir::before{
+            content: ''
+            ;
+            rotate: -45deg;
+            color: rgb(82, 80, 80);
+            font-size: 35px;
+            font-weight: 900;
+            height: 20px;
+            width: 20px;
+           animation: to 4s 1 forwards;
+            position: absolute;
+            top: 37%;
+            transform: translate(-50%,-50%);
+            left: 39%;
+            font-family: FontAwesome;
+           
+        }
+        .cir::after{
+            content: '';
+    font-size: 50px;
+    height: 16px;
+    /* top: 20px; */
+    width: 2px;
+    position: absolute;
+    background-color: rgb(217, 37, 175);
+    border-radius: 100%;
+    rotate: 230deg;
+    transition: .5s ease;
+    animation: lo .6s 1 forwards;
+    /* right: 20px; */
+    transform: translate(2px, 13px);
+    transform-origin: 91% 50%;
+
+        }
+        
+        @keyframes lo{
+            0%{
+                background-color: rgb(217, 37, 175);
+            }
+            25%{background-color: transparent;
+             
+            }
+            50%{background-color: transparent;
+             
+            }
+            75%{background-color: transparent;
+             
+            }
+
+            100%{background-color: transparent;
+             
+            }
+        }
+
+        @keyframes circle {0%{
+            border-top: 2px solid transparent;
+        }
+            10%{
+            border-top:2px solid transparent;
+        }
+        25%{ border-right:2px solid transparent;
+            border-bottom:2px solid transparent;
+            border-left:2px solid transparent;
+            border-top: 2px solid rgb(217, 37, 175);
+        }
+        50%{border-bottom:2px solid transparent;
+            border-left:2px solid transparent;
+            border-top: 2px solid rgb(217, 37, 175);
+          
+            border-right: 2px solid rgb(217, 37, 175);
+        }
+        75%{
+            border-left:2px solid transparent;
+            border-right: 2px solid rgb(217, 37, 175);
+            border-top: 2px solid rgb(217, 37, 175);
+
+            border-bottom: 2px solid rgb(217, 37, 175);
+        }
+        100%{border-bottom:2px solid transparent;
+            border-left:2px solid rgb(217, 37, 175);
+            border-right: 2px solid rgb(217, 37, 175);
+            border-top: 2px solid rgb(217, 37, 175);
+            border-bottom: 2px solid rgb(217, 37, 175);
+           
+        }
+            
+        }
+        @keyframes to {0%{
+            content: '10';
+        }
+        25%{content: '25';
+        }
+        50%{content: '50';
+        }
+        75%{
+            content: '75';
+        }
+        95%{content: '100';
+        
+        }
+        100%{content: '✔';
+       
+        font-family: FontAwesome;
+        
+        }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="cir">
+
+    </div>
+</body>
+</html>

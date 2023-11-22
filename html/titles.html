@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-weight: 800;
+        }
+              body {
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        color: #fff;
+        box-sizing: border-box;
+      }
+      .cont {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(243, 95, 174);
+        position: relative;
+      /* display: flex;
+      align-items: center;  */
+      }
+      form{text-align: center;
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 100vh;
+        justify-content: center;
+        
+      }
+      form input{z-index: 12;
+        margin: 15px 0;
+        height: 0;
+      }
+      form input::before{content: "";
+        position: absolute;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        border-radius: 11px;
+        cursor: pointer;
+        transition: background-color 0.25s linear;
+
+      }
+      form input:checked::before {
+        background-color: #fff;
+      }
+      form input::after {
+        content: ""attr(title)"";
+        position: relative;
+        top: -5px;
+        left: 30px;
+        opacity: 0;
+        display: block;
+        min-width: 120px;
+        font-size: 16px;
+        text-shadow: 1px 1px 1px black,-1px -1px 1px black;
+        transition: opacity 0.25s linear, left 0.25s linear;
+        color: #fff;
+        font-weight: bold;
+
+      }
+      form input:checked::after {
+        opacity: 1;
+        left: 20px;
+      }
+      .labels label{
+        text-align: center;
+      }
+      form .labels {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+       form .labels label {
+        min-width: 100vw;
+       min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+        background-color: #2b2b2b;
+        transition: transform 0.75s cubic-bezier(0.75, 0.25, 0, 1);
+      }
+     form .labels label:nth-child(1) {
+        background-color: #e6799a;
+      }
+     form .labels label:nth-child(2) {
+        background-color: rgb(129, 20, 129);
+      }
+      form input:nth-of-type(1):checked ~ .labels label {
+        transform: translateY(-0%);
+      }
+     form input:nth-of-type(2):checked ~ .labels label {
+        transform: translateY(-100%);
+      }
+      form input:nth-of-type(3):checked ~ .labels label {
+        transform: translateY(-200%);
+      }
+      input:checked{
+        outline: 0;
+        border: 0;
+      }
+      .icon {
+        position: absolute;
+        bottom: 30px;
+        font-size: 26px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        left: 0;
+        right: 0;
+        color: rgb(160, 7, 125);
+        transition: .5s ease;
+      }
+      .icon:hover{
+        color: white;
+      }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <form action="">
+            <input type="radio"id="slide1"name="slide"title="خانه" checked="checked" autofocus/>
+            <input type="radio" id="slide2" name="slide" title="پروژه ها" />
+            <input type="radio" id="slide3" name="slide" title="مباحث آموزشی" />
+       
+        <div class="labels">
+            <label for="slide1" id="slide1">
+                <div class="content">
+                  <h1>نگین وب</h1>
+                  <div class="icon">
+                    از کیبورد برای حرکت اسلایدها می توانید استفاده کنید
+                  </div>
+                </div>
+              </label>
+              <label for="slide2" id="slide2">
+                <div class="content">
+                  <h1>پروژه های کاربردی</h1>
+                </div>
+              </label>
+              <label for="slide3" id="slide3">
+                <div class="content">
+                  <h1>آموزش بروزترین مباحث front-end</h1>
+                </div>
+              </label>
+        </div>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+    <style>
+         *{
+            font-size: 32px;
+            color: black;
+            font-weight: 800;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        .course-title {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        padding: 100px;
+        font-size: 34px;
+        color: #fff;
+      }
+        body{overflow: hidden;
+            background-color: #a0e3ef;
+        }
+        .cont{
+            margin:0 auto;
+            width: 600px;
+            position: relative;
+            display: block;
+            height: 250px;
+            overflow: hidden;
+            color: white;
+            border-bottom: 3px solid #959292;
+        }
+        .mounts{
+            position: absolute;
+            right:-900px;
+            bottom: -20px;
+            height: 2px ;
+            width: 2px;
+            box-shadow: 0 0 0 50px #d99266, 60px 50px 0 70px #d99266,
+          90px 90px 0 50px #d99266, 250px 250px 0 50px #d99266,
+          290px 320px 0 50px #d99266, 320px 400px 0 50px #d99266;
+            /* box-shadow: 0 0 0 50px #4db6ac, 60px 50px 0 70px #4db6ac, 90px 90px 0 50px #4db6ac, 180px 180px 0 50px #4db6ac, 200px 255px 0 50px #4db6ac, 250px 340px 0 50px #4db6ac;      */
+                   transform: rotate(130deg);
+            animation: mountain 15s linear infinite;
+        }
+        .hills{
+            position: absolute;
+            right:-900px;
+            bottom: -50px;
+            width: 400px;
+            border-radius: 50%;
+            height: 15px;
+    
+            box-shadow: 0 0 0 50px #4db6ac,-20px 0 0 20px #4db6ac,-90px 0 0 50px #4db6ac,250px 0 0 50px #4db6ac,290px 0 0 50px #4db6ac,620px 0 0 50px #4db6ac;
+            animation: hill 5s 2s linear infinite;
+
+        }
+        .tree{transform: translateX(1350px);
+            position: absolute;
+            bottom: 0;
+            height: 100px;
+            width: 35px;
+            background-repeat: no-repeat;
+            background-image:url(/img/tree.svg) ;
+        }
+        .ruck{
+            position: absolute;
+            height:10px ;
+            width: 10px;
+            margin-top: -17%;
+            border-radius: 100%;
+            background-color: #252525;
+            bottom: -2px;
+            animation: rock 4s -0.53s linear infinite;
+            
+        }
+        .truck{
+           /* position: relative;
+        bottom: -186px;
+        right:-271px ; */
+            background: url(/img/truck.svg);
+            height: 60px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .weels{  
+            /* position: relative;
+        bottom: -172px;
+        right:-271px ; */
+            background: url(/img/wheels.svg) no-repeat;
+            height: 15px;
+            animation: trucks 4s 0.08s ease infinite;
+        }
+        .truck, .weels {
+    transition: all ease;
+    width: 85px;
+    margin-right: -60px;
+    position: absolute;
+    bottom: 0;
+    
+    animation: truck 4s 0.08s ease infinite;
+    right: 50%;
+    }
+    .truck::before {
+        content: "";
+        position: absolute;
+        animation: wind 1.5s 0s ease infinite;
+        width: 25px;
+        box-shadow: -30px 28px 0 1.5px rgb(101, 101, 243), -35px 18px 0 1.5px rgb(91, 91, 249);
+      }
+    .truck::after {
+        content: "بزن بریم";
+        position: absolute;
+        left: 15px;
+        padding: 2px 0;
+        color: white;
+        overflow: hidden;
+        animation: wind 1.5s 0s ease infinite;
+        width: 25px;
+        height: 33px;
+        font-size: 16px;
+      }
+      .tree{
+        animation: tree 3s 0s linear infinite;
+      }
+      .tree:nth-child(2) {
+        animation: tree2 2s 0.15s linear infinite;
+      }
+      .tree:nth-child(3) {
+        animation: tree3 8s 0.05s linear infinite;
+      }
+      @keyframes tree {
+        0%{transform: translateX(1350px);}
+        100%{transform: translateX(-50px);}
+      }
+      @keyframes tree2 {
+        0%{transform: translateX(650px);}
+        100%{transform: translateX(-50px);}
+      }
+      @keyframes tree3 {
+        0%{transform: translateX(2750px);}
+        100%{transform: translateX(-50px);}
+      }
+      @keyframes rock {
+        0%{right: -200px;}
+        100%{right: 2000px;}
+      }
+      @keyframes truck {
+        6%{transform: translateY(0px);}
+        7%{transform: translateY(-6px);}
+        9%{transform: translateY(0px);}
+        10%{transform: translateY(-1px);}
+        11%{transform: translateY(0px);}
+      }
+      @keyframes trucks {0%{rotate:(0);}
+        6%{transform: translateY(0px)}
+        7%{transform: translateY(-6px);}
+        9%{transform: translateY(0px);}
+        10%{transform: translateY(-1px);}
+        11%{transform: translateY(0px);}
+        100%{rotate: 100deg;}
+      }
+      @keyframes wind {
+        50%{transform: translateY(5px);}
+      }
+      @keyframes mountain {
+        100%{
+          transform: translateX(-2000px) rotate(130deg);
+        }
+      }
+      @keyframes hill {
+        100%{
+          transform: translateX(-2000px);
+        }
+        
+      }
+    </style>
+</head>
+<body>
+  
+    <div class="cont">
+        <div class="mounts"></div>
+        <div class="hills"></div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="ruck"></div>
+        <div class="truck"></div>
+        <div class="weels"></div>
+    </div>
+</body>
+</html>

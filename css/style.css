@@ -1,0 +1,90 @@
+.button-flip3d-vertical1 {
+	  
+  	.flipper-flip3d-vertical1 {
+    	transform-origin: 100% 22.5px;
+  	}
+  
+  	.front {
+    	transform: translateZ(22.5px);
+		background-image:  linear-gradient(90deg, #000, #3c3c3c);
+  	}
+  
+  	.back {
+	  	-webkit-transform: rotateX(90deg) translateZ(22.5px);
+	  	-ms-transform: rotateX(90deg) translateZ(22.5px); 
+    	transform: rotateX(90deg) translateZ(22.5px);
+		background-image:  linear-gradient(90deg, #000, #3c3c3c);
+  	}
+  	
+  	&:hover .flipper-flip3d-vertical1 {
+  		transform: rotateX(-90deg);
+	}
+}
+
+.button-flip3d-vertical2 {
+	  
+  	.flipper-flip3d-vertical2 {
+    	transform-origin: 100% 22.5px;
+  	}
+  
+  	.front {
+    	transform: translateZ(22.5px);
+		background-image:  linear-gradient(90deg, #000, #3c3c3c);
+  	}
+  
+  	.back {
+	  	-webkit-transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(22.5px);
+	  	-ms-transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(22.5px); 
+    	transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(22.5px);
+		background-image:  linear-gradient(90deg, #000, #3c3c3c);
+  	}
+  	
+  	&:hover .flipper-flip3d-vertical2 {
+  		transform: rotateX(90deg);
+	}
+}
+.button-flip3d-vertical1 {
+	  
+  .flipper-flip3d-vertical1 {
+    transform-origin: 100% 22.5px;
+  }
+
+  .front {
+    transform: translateZ(22.5px);
+  background-image:  linear-gradient(90deg, #000, #3c3c3c);
+  }
+
+  .back {
+    -webkit-transform: rotateX(90deg) translateZ(22.5px);
+    -ms-transform: rotateX(90deg) translateZ(22.5px); 
+    transform: rotateX(90deg) translateZ(22.5px);
+  background-image:  linear-gradient(90deg, #000, #3c3c3c);
+  }
+  
+  &:hover .flipper-flip3d-vertical1 {
+    transform: rotateX(-90deg);
+}
+}
+
+.button-flip3d-vertical2 {
+  
+  .flipper-flip3d-vertical2 {
+    transform-origin: 100% 22.5px;
+  }
+
+  .front {
+    transform: translateZ(22.5px);
+  background-image:  linear-gradient(90deg, #000, #3c3c3c);
+  }
+
+  .back {
+    -webkit-transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(22.5px);
+    -ms-transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(22.5px); 
+    transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(22.5px);
+  background-image:  linear-gradient(90deg, #000, #3c3c3c);
+  }
+  
+  &:hover .flipper-flip3d-vertical2 {
+    transform: rotateX(90deg);
+}
+}

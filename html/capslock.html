@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html  lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/css.css">
+    <style>
+    #text {display:none;color:red ;
+    padding: 5px;
+border-radius: 7px;
+display: none;
+border: 2px solid red;}
+input{padding: 10px;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+}
+.cont{direction: rtl;
+    margin:80px auto;
+    width: 100%;
+    text-align: center;
+
+}
+input:focus{
+    border: 2px solid greenyellow;
+}
+    </style>
+</head>
+<body>
+
+
+<div class="cont">
+    
+<input id="myInput" value="" autofocus placeholder="نام کاربری را وارد نمایید...">
+<br>
+<p id="text">caps lock خود را خاموش کنید!</p>
+</div>
+
+<script>
+var input = document.getElementById("myInput");
+var text = document.getElementById("text");
+input.addEventListener("keyup", function(event) {
+
+if (event.getModifierState("CapsLock")) {
+    text.style.display = "inline-block";
+    input.style.border='2px solid red';
+  } else {
+    text.style.display = "none"
+    input.style.border='2px solid greenyellow';
+  }
+});
+</script>
+
+</body>
+</html>

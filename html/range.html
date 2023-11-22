@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/230f1edc62.js" crossorigin="anonymous"></script> 
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous">
+    </script>
+    <style>
+        .cont{
+            /* background-color: rgb(200, 156, 241); */
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .range{display: flex;
+         height: 130px;
+         width: 350px;
+         align-items: center;
+         justify-content: center;
+            position: relative;
+            background-color:rgb(164, 164, 234);
+          
+          
+        }
+        .one{left: 75px;
+            position: absolute;
+        }
+        p{font-weight: 600;
+            color: rgb(120, 11, 153);
+        }
+        input{
+            border: 1px solid palevioletred;
+ height: 15px;
+    width: 200px;
+    background-color: transparent;
+   color: rgb(222, 51, 51);
+        }
+
+
+        .span{rotate: 45deg;
+            height: 30px;
+        opacity:1;
+
+        transition:opacity .3s ease;
+            position: absolute;
+            top: 33px;
+       
+          transform: translate(-20% ,-25%);
+            width: 30px;
+            background:rgb(211, 125, 189);
+            border-radius: 100% 100% 0 100%;
+        }
+                /* .span{rotate: 45deg;
+            height: 35px;
+        opacity:1;
+
+        transition:opacity .3s ease;
+            position: absolute;
+            top: 60px;
+       
+          transform: translate(-20% ,-35%);
+            width: 35px;
+            background:rgb(211, 125, 189);
+            border-radius: 100% 100% 100% 100%;
+        } */
+        span{display: inline-block;
+            rotate: -45deg;
+      position: relative;
+      top: 10%;
+    left: 50%;
+    margin-left: 4px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    border-radius: 100%;
+  
+    transform: translate(-50%,-50%);
+text-align: center;
+    color: rgb(255, 255, 255);
+   
+      font-size: 13px;
+      font-weight: 600;
+        }
+    .fi .span{opacity: 1;
+         
+        }
+input[type=range] {
+
+  -webkit-appearance: none;
+  margin: 10px 5px;
+  width: 100%;
+}
+input[type="range"] {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none; 
+  /* creating a custom design */
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  /*  slider progress trick  */
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* Track: webkit browsers */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 15px;
+  background: #dcd1d1;
+  border-radius: 16px;
+}
+
+
+/* Track: Mozilla Firefox */
+input[type="range"]::-moz-range-track {
+  height: 15px;
+  background: #d9cece;
+  border-radius: 16px;
+  border: 1px solid palevioletred;
+}
+
+/* Thumb: webkit */
+input[type="range"]::-webkit-slider-thumb {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none; 
+  /* creating a custom design */
+  height: 15px;
+  transition: .4s ease;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 0, 187);
+  /*  slider progress trick  */
+  box-shadow:-407px 0 0 320px rgba(203, 147, 203, 0.63), -407px 0 0 400px rgba(195, 135, 195, 0.734);
+}
+
+
+/* Thumb: Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 0, 187);
+  /*  slider progress trick  */
+  box-shadow: -407px 0 0 400px rgb(211, 125, 189),-377px 0 0 -300px rgb(0, 0, 0);
+}
+input[type="range"]::-webkit-slider-thumb:hover {background-color: #ff00b7;
+border-color: rgb(131, 131, 206);}
+/* input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #d21616;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-progress-inner-value{
+    background: #949292;
+}
+input[type=range]::-webkit-slider-runnable-track {
+
+  height: 6px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #aaa9a9;
+  background: #6f30a9;
+  border-radius: 5px;
+  border: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #949292;
+  border: none;
+  height: 15px;
+  position: relative;
+  width:15px;
+  border-radius: 100%;
+  background: pink;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+input[type=range]{
+   accent-color: coral;
+} */
+
+p.n{ text-align: center;
+    display: flex;
+    
+    padding-left: 10px;
+    align-items: center;
+    background-color:rgb(164, 164, 234);height: 130px;border-radius:10px 0 0 10px;}
+p.m{padding-right: 10px;
+    display: flex;
+    align-items: center; background-color:rgb(164, 164, 234);height: 130px;border-radius:0 10px 10px 0;}
+
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <p class="n">0</p>
+        <div class="range">
+            <div class="span" id="span"><span>100</span></div>
+            <input type="range" name="" id="rng" min="0" max="200" step="1">
+            <!-- <p class="one">0</p>
+            <p class="tow">200</p> -->
+        </div>
+        <p class="m">200</p>
+    </div>
+    <script>
+//         $('input').click(function(){var input=$('input').val();
+// $('.span span').text(input);
+// var valu=input-2;
+// if(valu>=100){$('.span').css({'left':(input/2) -4 + '%'});
+// $('.range').addClass('fi');}
+
+// else{$('.span').css({'left':(input/2)+ 1 + '%'});
+// $('.range').addClass('fi');}});
+
+
+// $('.span').css({'left':(input/2) -1 + '%'});
+// $('.range').addClass('fi');
+var inp=document.querySelector('input');
+var spn=document.querySelector('span');
+var spn1=document.getElementById('span');
+
+inp.oninput=(function(){
+    let val =inp.value;
+    if(val>=100){
+        spn.textContent=val;
+    spn1.style.left=(val/2)-7+"%";  
+    }
+
+
+    else{     spn.textContent=val;
+    spn1.style.left=(val/2)-3.5+"%"; }
+    // spn.textContent=val;
+    // spn1.style.left=(val/2)+"%";
+})
+        
+        // $('input').blur(function(){
+        //     $('.range').removeClass('fi');
+        // });
+
+    </script>
+</body>
+</html>

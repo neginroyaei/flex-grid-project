@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- https://ciar4n.com/wp-caption-hvr-fx -->
+    <!-- <link href="css/imagehover-extended.min.css" rel="stylesheet" media="all"> -->
+    <link rel="stylesheet" href="/css/imagehover.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="/css/ihover.css">
+    <style>
+        *{transition: .5s ease-in!important;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        .cont{margin: 200px auto;
+            display: flex;
+            width: 900px;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .card{
+            box-shadow: 2px 2px 5px grey;
+          
+            background-color: white;
+            direction: rtl;
+            text-align: center;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        p{
+            font-size: 15px;
+            color: rgb(114, 114, 114);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        span{
+            color: blueviolet;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        #hi{background-color: rgb(147, 174, 118)!important;
+
+        }
+        #h{
+            background-color: grey;
+        }
+        .ih-item.square {
+    position: relative;
+    width: 259px;
+    height: 216px;
+    border: 8px solid #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.ih-item.square.effect9 .info h3 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px;
+    background: #7f88dd;
+    margin: 0;}
+.ih-item.square.effect1 .info h3 {
+ 
+    background: #1d1d1e!important;
+    }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="ih-item square effect1 left_and_right"><a href="#">
+            <div class="img"><img src="/img/android.jpg" alt="img"></div>
+            <div class="info">
+              <h3 >Heading here</h3>
+              <p>Description goes herenjh</p>
+            </div></a></div>
+          
+        <div class="ih-item square effect9 bottom_to_top"><a href="#">
+            <div class="img"><img src="/img/frontend.jpg" alt="img"></div>
+            <div class="info">
+              <h3>Heading here</h3>
+              <p style="font-size: 20px;font-weight: 800; color: rgb(108, 108, 230);">دوره جامع طراحی سایت<br>با مبتکران نوین</p>
+            </div></a></div>
+        <div class="ih-item square effect6 from_top_and_bottom"><a href="#">
+            <div class="img"><img src="/img/php.jpg" alt="img"></div>
+            <div class="info">
+              <h3>Heading here</h3>
+              <p>Description goes here</p>
+            </div></a></div>
+        <div class="ih-item square effect7"><a href="#">
+            <div class="img"><img src="/img/php.jpg" alt="img"></div>
+            <div class="info">
+              <h3>Heading here</h3>
+              <p>Description goes here</p>
+            </div></a></div>
+        <div class="ih-item square effect4"><a href="#">
+            <div class="img"><img src="/img/php.jpg" alt="img"></div>
+            <div class="info">
+              <h3>Heading here</h3>
+              <p>Description goes here</p>
+            </div></a></div>
+        <div class="ih-item square effect14 left_to_right"><a href="#">
+            <div class="img"><img src="/img/php.jpg" alt="img"></div>
+            <div class="info">
+              <h3>Heading here</h3>
+              <p>Description goes here</p>
+            </div></a></div>
+           
+        
+          
+      
+        <div class="card animate__animated animate__backInLeft animate__delay-.5s ">
+      
+       
+    <figure id="h" class="imghvr-shutter-out-diag-2">
+        <img src="/img/android.jpg">
+        <figcaption id="hi">
+          دوره تخصصی اندروید
+        </figcaption>
+      </figure>
+      <p>به دوره ما خوش آمدید</p>
+      <span>مبتکران</span>
+    </div>
+      <div class="card animate__animated animate__backInDown animate__delay-1s">
+    <figure class="imghvr-hinge-left">
+        <img src="/img/frontend (1).jpg">
+        <figcaption>
+          دوره تخصصی front end
+        </figcaption>
+      </figure>
+      <p>به دوره ما خوش آمدید</p>
+      <span>مبتکران</span>
+    </div>
+      <div class="card animate__animated animate__backInRight animate__delay-1.5s">
+    <figure class="imghvr-shutter-out-diag-1">
+        <img src="/img/php.jpg">
+        <figcaption>
+          دوره تخصصی php
+        </figcaption>
+      </figure>
+      <p>به دوره ما خوش آمدید</p>
+      <span>مبتکران</span>
+    </div>
+      <div class="card animate__animated animate__backInLeft animate__delay-2s">
+    <figure class="imghvr-fold-left">
+        <img src="/img/frontend.jpg">
+        <figcaption>
+          دوره تخصصی php
+        </figcaption>
+      </figure>
+      <p>به دوره ما خوش آمدید</p>
+      <span>مبتکران</span>
+    </div>
+      <div class="card animate__animated animate__backInUp animate__delay-2.5s">
+    <figure class="imghvr-zoom-out-flip-horiz">
+        <img src="/img/android.jpg">
+        <figcaption>
+          دوره تخصصی php
+        </figcaption>
+      </figure>
+      <p>به دوره ما خوش آمدید</p>
+      <span>مبتکران</span>
+    </div>
+      <div class="card card animate__animated animate__backInRight animate__delay-3s">
+    <figure class="imghvr-zoom-out-flip-vert">
+        <img src="/img/php.jpg">
+        <figcaption>
+          دوره تخصصی php
+        </figcaption>
+      </figure>
+      <p>به دوره ما خوش آمدید</p>
+      <span>مبتکران</span>
+    </div>
+    <div class="ih-item circle effect2 left_to_right animate__animated animate__backInLeft animate__delay-5s"><a href="#">
+        <div class="spinner"></div>
+        <div class="img"><img src="/img/android.jpg" alt="img"></div>
+        <div class="info">
+          <div class="info-back">
+            <h3>Heading here</h3>
+            <p>Description goes here</p>
+          </div>
+        </div></a></div>
+        <div class="ih-item circle effect1 animate__animated animate__backInUp animate__delay-5s"><a href="#">
+            <div class="spinner"></div>
+            <div class="img"><img src="/img/frontend (1).jpg" alt="img"></div>
+            <div class="info">
+              <div class="info-back">
+                <h3>Heading here</h3>
+                <p>Description goes here</p>
+              </div>
+            </div></a></div>
+    <div class="ih-item circle effect2 right_to_left animate__animated animate__backInRight animate__delay-4s"><a href="#">
+        <div class="spinner"></div>
+        <div class="img"><img src="/img/php.jpg" alt="img"></div>
+        <div class="info">
+          <div class="info-back">
+            <h3>Heading here</h3>
+            <p>Description goes here</p>
+          </div>
+        </div></a></div>
+    </div>
+</body>
+</html>

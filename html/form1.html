@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rlt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/230f1edc62.js" crossorigin="anonymous"></script> 
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous">
+    </script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            background-color: #efefef;
+        }
+        .container{position: relative;
+            margin:200px auto;
+            width: 400px;
+            
+
+     
+        }
+        .card{direction: rtl;
+           border-radius: 6px;
+      width:400px;
+      background-color: white;
+            box-shadow: 2px 2px 5px grey,-2px -2px 5px rgb(191, 190, 190);
+        }
+
+        .container .card:nth-child(1){
+            background-color: white;
+
+        }
+       .inputs{width: 100%;      
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+            align-content: center;
+        }
+        .container .card:nth-child(2){
+            background-color: white;
+            width: 100%;
+
+        }
+        
+        .inputs input{height: 30px;
+            margin-top: 30px;
+            color: rgb(228, 55, 55);
+            background-color: transparent;
+            outline: none;
+            caret-color: red;
+            border:none ;
+            padding: 10px;
+            padding-right: 35px;
+            width: 100%;
+        }
+        input:placeholder-shown~label,input~label{color: gray;
+            
+            top:33px;
+        transition: .5s ease;
+            right: 30px;
+            font-weight: 700;
+            position: absolute;
+        }
+        .title{width: 100%;
+         padding:0 30px 0 10px ;
+         margin-top: 30px;
+         margin-bottom: 20px;
+         display: inline-block;
+            color: rgb(227, 105, 105);
+            font-weight: 700;
+            border-right: 5px solid rgb(226, 95, 95);
+            font-size: 32px;
+
+        }
+        .bar{position: relative;
+            width: 90%;
+            border-radius: 7px;
+           align-self: center;
+            background-color: grey;
+            height: .5px ;
+            margin-bottom: 20px;
+            border: none;
+        }
+        .bar::after{position: absolute;
+            content: '';
+            border-radius: 7px;
+            transition: .6s ease;
+            height: 2px;
+            width: 0;
+            right:180px;
+            background-color: rgb(211, 83, 83);
+        }
+        .bar::before{position: absolute;
+            content: '';
+            transition: .6s ease;
+            border-radius: 7px;
+            height: 2px;
+            right: 180px;
+            width:0;
+            background-color: rgb(211, 83, 83);
+        }
+        input:focus~.bar:after{
+width: 50%;
+left: 0;
+
+        }
+        input:focus~.bar::before{
+width: 50%;
+right: 0;
+
+        }
+
+        .buttons{margin:30px 120px ;
+     
+         
+            text-align: center;
+        }
+.bar2{
+    height: .5px !important;
+}
+button{display: block;
+    width:160px;
+text-align: center;
+cursor: pointer;
+font-size: 20px;
+transition: .5s ease;
+font-weight: 600;
+background-color: rgb(239, 94, 94);
+border-radius: 5px
+;
+
+color: white;
+height: 50px;}
+button:hover{
+    background-color: rgb(195, 93, 93);
+}
+ 
+ a{margin-bottom: 50px;
+    display: inline-block;
+    margin-top: 40px;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .5s ease;
+
+color: grey;
+ }    
+ a:hover{
+    color: rgb(209, 80, 80) ;
+ } 
+ input:focus~label,input~label{
+top: 10px;
+right: 40px;
+ }
+ .card1{height: 15px;
+    width: 98%;
+    border-radius: 5px;
+    margin: 0 auto;
+box-shadow: -2px -2px 5px rgb(174, 173, 173);
+ 
+
+ }
+ .card2{background-color: rgb(209, 96, 96);
+
+ }
+ .card2 .title,.card2 a{z-index: 1;
+    color: white;
+
+ }
+ .card2 .title{border-right-color:rgb(247, 245, 245) ;
+    color: rgb(234, 234, 234);
+ }
+ .card2 button{
+    display: inline-block;
+text-align: center;
+    background-color: rgb(234, 233, 233);
+    color: rgb(208, 87, 87);
+ }
+ .card2 input~label{
+    color: rgb(210, 209, 206);
+ }
+ .card2 input{
+    caret-color: white;
+    color: white;
+ }
+ .card2 .buttons{width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+ }
+ .card2 .bar{
+    background-color: rgb(195, 195, 196);
+ }
+ .card2 .bar::after,.card2 .bar::before{
+    background-color: rgb(95, 114, 181);
+ }
+ .card2 a:hover{
+    color: #b8b2b2;
+ }
+ .card2 button:hover{
+    background-color: #d4d2d2;
+ }
+ .card2{direction: rtl;
+    position: absolute;
+
+    width:100px;
+    transition:all .4s ease;
+    height: 100px;
+    border-radius: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    top: 15px;
+    left:-50px;
+ }
+ 
+ .toggle{cursor: pointer;
+    box-shadow: 2px 2px 5px rgb(154, 155, 154), -2px -2px 5px rgb(154, 155, 154);
+    position: relative;
+    background-color: rgb(223, 92, 92);
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+   
+    color: rgb(240, 239, 239);
+    font-size: 40px;
+    text-align: center;
+    line-height: 2.5;
+ }
+ .toggle::before{
+    content: '\f040';
+    font-family: FontAwesome;
+ }
+ .card2 .title,.card2 .buttons,.card2 .inputs{position: relative;
+
+    opacity: 0;
+    left:50px;
+    visibility: hidden;
+
+ }
+ .close::before{content: '\00d7';
+
+
+
+
+ }
+ .close{
+    position: absolute;
+ top: -15px;
+ cursor: pointer;
+ left: 20px;
+ font-size: 50px;
+ font-weight: bold;
+ }
+ .active .card2{
+    width: 100%;
+    height: auto;
+    left: 0;
+    padding: 60px 0 50px ;
+   top: 25px;
+    overflow: hidden;
+    /* background-color: aqua; */
+    border-radius: 5px;
+ }
+
+ .active .toggle{
+    position: absolute;
+    top: 15px;
+    left:-50px;
+    transform: scale(12);
+ }
+ .active .toggle::before{
+    content: '';
+ }
+ .active .card:nth-child(2){
+   background-color: rgb(233, 232, 232);
+   width: 95%;
+  margin: 0 auto;
+
+ }
+ .active .card:nth-child(1){
+   background-color: rgb(224, 223, 223);
+   width: 90%;
+   border-radius: 4px;
+  margin: 0 auto;
+  height: 14px;
+ }
+ .active .card2 .title,.active .card2 .buttons,.active .card2 .inputs{position: relative;
+ visibility: visible;
+transition: all .4s ease;
+  opacity:1;
+  left:0;
+
+
+}
+.active .card2 .title{margin-top: -25px;
+    transition-duration: .5s ;
+}
+.active .card2 .buttons{
+    transition-duration: .9s ;
+}
+.active .card2 .buttons a{margin-bottom: 0;
+    transition-duration: .9s ;
+}
+.active .card2 .inputs:nth-child(1){
+    transition-duration: .6s ;
+}
+.active .card2 .inputs:nth-child(2){
+    transition-duration: .8s ;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card card1">
+            
+        </div>
+        <div class="card ca">
+            <div class="title">ورود</div>
+            <form action="">
+                <div class="inputs">
+                    <input type="text" name="" id="in1" placeholder=" ">
+                    <label for="in1">نام کاربری</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="inputs">
+                    <input type="text" name="" id="in2" placeholder=" ">
+                    <label for="in2">کلمه عبور</label>
+                    <div class="bar bar2"></div>
+                </div>
+                <div class="buttons">
+                    <button type="submit">بزن بریم</button>
+                    <a href="#">بازیابی رمز عبور</a>
+                </div>
+            </form>
+
+        </div>
+        <div class="card2">
+             <div class="toggle"></div>
+            <div class="title">ثبت نام <div class="close"></div></div>
+            <form action="">
+                <div class="inputs">
+                    <input type="text" name="" id="in3" placeholder=" ">
+                    <label for="in3">کلمه عبور</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="inputs">
+                    <input type="text" name="" id="in4" placeholder=" ">
+                    <label for="in4"> تکرار کلمه عبور </label>
+                    <div class="bar bar2"></div>
+                </div>
+                <div class="buttons">
+                    <button type="submit">بزن بریم</button>
+                    <a href="#">بازیابی رمز عبور</a>
+                </div>
+            </form>
+        </div>
+    </div>
+ <script>
+    $('.toggle').click(function(){
+        $('.container').stop().addClass('active');
+    });
+    $('.close').click(function(){
+        $('.container').stop().removeClass('active');
+    });
+ </script>   
+</body>
+</html>

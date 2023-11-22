@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/230f1edc62.js" crossorigin="anonymous"></script> 
+    <style>
+        *{
+            font-size: 32px;
+            color: black;
+            font-weight: 800;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        body{overflow: hidden;
+            position: relative;
+        }
+     
+        label{position: absolute;
+         left: 0;
+        z-index: 1;
+         height: 40px;
+         transition: .5s ease;
+         display: inline-block;
+        
+        }
+        label span{
+            opacity: 0;
+        }
+        input:checked~label{
+            right: 0;
+            opacity: 1;
+        }
+        input:checked~label p{
+            opacity: 0;
+        }
+        input:checked~label span{
+            opacity: 1;
+            z-index: 1;
+        }
+        input{position: absolute;
+            display: none;
+        }
+        .menu{transition: .5s cubic-bezier(.17,.88,.32,1.25);
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+       gap: 20px;
+            opacity: 0;
+            background-color: rgb(7, 143, 122);
+        }
+        a{color: white;
+            margin-top:0;
+            transition: .5s cubic-bezier(.17,.88,.32,1.25);
+        }
+        .ma{
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(122, 122, 225);
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        .icon{
+            color: white;
+        }
+        input:checked~ .menu{
+            opacity: 1;
+         
+        }
+        input:checked~ .menu{
+       gap: 60px;
+        }
+        /* input:checked~ lable{
+            opacity: 1;
+            z-index: 2;
+        } */
+   
+        
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="input">
+    <label for="input">
+        <p class="icon fa fa-list"></p>
+        <span class="icon fa fa-xmark"></span>
+    </label>
+    <div class="menu">
+        <a href="#">خانه</a>
+        <a href="#">درباره ما</a>
+        <a href="#">سوالات متداول</a>
+        <a href="#">پشتیبانی</a>
+    </div>
+    <div class="ma">ورود به سایت</div>
+</body>
+</html>
